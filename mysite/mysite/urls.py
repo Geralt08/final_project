@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from auctions.views import MainView
+from auctions.views import PgeView, TauronView, EneaView, EnergaView, IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', MainView.as_view(), name="main-view")
+    path('', IndexView.as_view(), name="index"),
+    path('pge/', PgeView.as_view(), name="pge-view"),
+    path('tauron/', TauronView.as_view(), name="tauron-view"),
+    path('enea/', EneaView.as_view(), name="enea-view"),
+    path('energa/', EnergaView.as_view(), name="energa-view"),
 ]
