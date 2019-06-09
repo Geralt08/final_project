@@ -1,11 +1,11 @@
 from django import views
 from django.shortcuts import render
 
-import models
+from auctions.models import PgeAuction
 
 
 class MainView(views.View):
     def get(self, request):
-        auctions = models.PgeAuction.objects.get.all()
+        auctions = PgeAuction.objects.all()
         ctx = {"auctions": auctions}
         return render(request, 'main.html', ctx)

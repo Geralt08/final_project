@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from auctions.views import MainView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('index/', MainView.as_view(), name="main-view")
 ]
