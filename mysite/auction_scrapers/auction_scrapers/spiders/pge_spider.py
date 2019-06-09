@@ -1,6 +1,6 @@
 import scrapy
 
-from auction_scrapers.items import PgeItem
+# from auction_scrapers import items
 
 
 class AuctionPgeSpider(scrapy.Spider):
@@ -23,12 +23,12 @@ class AuctionPgeSpider(scrapy.Spider):
 
             yield rv
 
-            item = PgeItem()
-            item["auction_number"] = rv["auction_number"]
-            item["auction_title"] = rv["auction_title"]
-            item["auction_date_publish"] = rv["auction_date_publish"]
-            item["auction_date_put"] = rv["auction_date_put"]
-            item["auction_date_open"] = rv["auction_date_open"]
-            yield item
+            # item = items.PgeItem()
+            # item["auction_number"] = rv["auction_number"]
+            # item["auction_title"] = rv["auction_title"]
+            # item["auction_date_publish"] = rv["auction_date_publish"]
+            # item["auction_date_put"] = rv["auction_date_put"]
+            # item["auction_date_open"] = rv["auction_date_open"]
+            # yield item
 
 

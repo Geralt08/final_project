@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Numer zamówienia</th>
+        <th scope="col">Zamówienie</th>
+        <th scope="col">Data publikacji</th>
+        <th scope="col">Data złożenia ofert</th>
+        <th scope="col">Data otwarcia ofert</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for auction in auctions %}
+    <tr>
+        <td>{{ auction.auction_number }}</td>
+        <td>{{ auction.auction_title }}</td>
+        <td>{{ auction.auction_date_publish }}</td>
+        <td>{{ auction.auction_date_put }}</td>
+        <td>{{ auction.auction_date_open }}</td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+
+{% endblock %}

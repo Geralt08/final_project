@@ -6,8 +6,8 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-def process_item(self, item, spider):
-    item.save()
-    return item
+# def process_item(self, item, spider):
+#     item.save()
+#     return item
 
 
